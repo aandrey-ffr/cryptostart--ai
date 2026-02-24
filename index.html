@@ -1,61 +1,81 @@
 <!DOCTYPE html>
 <html>
 <head>
-
 <title>CryptoStart AI</title>
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
 
 body{
-font-family: Arial;
-background:#0f172a;
+margin:0;
+font-family:Arial, sans-serif;
+background: linear-gradient(-45deg, #0f172a, #1e293b, #020617, #0f172a);
+background-size: 400% 400%;
+animation: gradient 15s ease infinite;
 color:white;
+}
+
+@keyframes gradient {
+0% {background-position: 0% 50%;}
+50% {background-position: 100% 50%;}
+100% {background-position: 0% 50%;}
+}
+
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
 text-align:center;
-padding:50px;
+padding:20px;
 }
 
 h1{
-font-size:40px;
+font-size:60px;
+margin-bottom:20px;
 }
 
-button{
-padding:15px 30px;
-margin:10px;
-font-size:18px;
-border:none;
-border-radius:10px;
-cursor:pointer;
+p{
+font-size:20px;
+max-width:600px;
+opacity:0.8;
 }
 
-.container{
+.buttons{
 margin-top:40px;
 }
 
-</style>
+button{
+padding:15px 35px;
+margin:15px;
+font-size:18px;
+border:none;
+border-radius:50px;
+cursor:pointer;
+background:linear-gradient(90deg,#2563eb,#06b6d4);
+color:white;
+transition:0.3s;
+}
 
+button:hover{
+transform:scale(1.1);
+}
+
+</style>
 </head>
 
 <body>
 
-<h1>CryptoStart AI</h1>
+<div class="hero">
+<h1>CryptoStart AI 🚀</h1>
+<p>Современный обучающий проект о криптовалюте с AI-помощником и актуальными курсами.</p>
 
-<p>Обучающий сайт о криптовалюте с AI помощником</p>
-
-<div class="container">
-
-<a href="crypto.html">
-<button>Что такое крипта?</button>
-</a>
-
-<a href="rates.html">
-<button>Курсы криптовалют</button>
-</a>
-
-<a href="ai.html">
-<button>AI помощник</button>
-</a>
+<div class="buttons">
+<a href="crypto.html"><button>Обучение</button></a>
+<a href="rates.html"><button>Курсы</button></a>
+<a href="ai.html"><button>AI помощник</button></a>
+</div>
 
 </div>
 
