@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Курсы криптовалют</title>
+
+<style>
+
+body{
+font-family:Arial;
+background:#0f172a;
+color:white;
+padding:40px;
+text-align:center;
+}
+
+table{
+margin:auto;
+border-collapse:collapse;
+width:300px;
+}
+
+td,th{
+border:1px solid white;
+padding:10px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Курсы криптовалют</h1>
+
+<table>
+
+<tr>
+<th>Валюта</th>
+<th>Цена USD</th>
+</tr>
+
+<tr>
+<td>Bitcoin</td>
+<td id="btc">loading...</td>
+</tr>
+
+<tr>
+<td>Ethereum</td>
+<td id="eth">loading...</td>
+</tr>
+
+<tr>
+<td>USDT</td>
+<td id="usdt">loading...</td>
+</tr>
+
+</table>
+
+<br>
+
+<a href="index.html">⬅ Вернуться на главную</a>
+
+<script>
+
+fetch("https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,tether&vs_currencies=usd")
+.then(response => response.json())
+.then(data => {
+
+document.getElementById("btc").innerHTML = data.bitcoin.usd
+document.getElementById("eth").innerHTML = data.ethereum.usd
+document.getElementById("usdt").innerHTML = data.tether.usd
+
+})
+
+</script>
+
+</body>
+</html>
